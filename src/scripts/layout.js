@@ -16,10 +16,14 @@ function handleHashChnage(){
     openToggleView(hash);
 }
 
+function removeLocationHash(){
+    window.location.hash = '';
+}
+
 function init(){
     handleHashChnage();
     window.onhashchange = handleHashChnage;
-    $('#tomato').click(closeToggleView);
+    $('#tomato').click(removeLocationHash);
 }
 
 export {
