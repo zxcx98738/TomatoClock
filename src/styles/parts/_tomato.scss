@@ -2,20 +2,20 @@
 	.countDown {
 		.clock {
 			position: absolute;
-			top: 13px;
+			top: 40px;
 			padding-top: 8px;
-			left: 180px;
-			width: 411px;
-			height: 202px;
-			font-size: 170px;
+			left: 120px;
+			width: 451px;
+			height: 252px;
+			font-size: 200px;
 			color: $color-light3;
 			text-align: left;
 		}
 		.bell, .cancel {
 			position: absolute;
-			top: 225px;
-			width: 43px;
-			height: 43px;
+			top: 300px;
+			width: 48px;
+			height: 48px;
 			border: 2px solid $color-light3;
 			border-radius: 50%;
 			display: flex;
@@ -23,17 +23,17 @@
 			background-color: $color-primary;
 		}
 		.bell {
-			left: 277px;
+			left: 250px;
 		}
 		.cancel {
-			left: 421px;
+			left: 394px;
 		}
 		.play {
 			position: absolute;
-			top: 217px;
-			left: 341px;
-			width: 59px;
-			height: 59px;
+			top: 292px;
+			left: 314px;
+			width: 64px;
+			height: 64px;
 			border: 1px solid $color-light3;
 			border-radius: 50%;
 			display: flex;
@@ -45,9 +45,9 @@
 		justify-content: center;
 		.orangeTomato {
 			position: absolute;
-			top: 410px;
-			width: 800px;
-			height: 260px;
+			top: 620px;
+			width: 1200px;
+			height: 200px;
 		}
 	}
 }
