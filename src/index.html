@@ -10,11 +10,37 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
     <script src="./index.js"></script>
+    <style>
+        #demo svg{
+            font-size: 48px;
+        }
+        #demo svg path{
+            color: orange;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
         <nav>
+            <span>
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-play"></i>
+                <i class="fas fa-pause"></i>
+                <i class="fas fa-times"></i>
+            </span>
+            <span style="font-size: 48px; color: red;">
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-play"></i>
+                <i class="fas fa-pause"></i>
+                <i class="fas fa-times"></i>
+            </span>
+            <span id="demo">
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-play"></i>
+                <i class="fas fa-pause"></i>
+                <i class="fas fa-times"></i>
+            </span>
             <span class="now-datetime front">2020.03.20</span>
             <span class="now-datetime back">星期六13:38</span>
         </nav>
