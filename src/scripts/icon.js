@@ -5,14 +5,18 @@ import {
     faPlay,
     faPause,
     faTimes,
-    faBell
+    faBell,
+    faBellSlash,
+    faCheck,
 } from '@fortawesome/free-solid-svg-icons';
 
 const icons = [
     faPlay,
     faPause,
     faTimes,
-    faBell
+    faBell,
+    faBellSlash,
+    faCheck
 ];
 
 function init(){

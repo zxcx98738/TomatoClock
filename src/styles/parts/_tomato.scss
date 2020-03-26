@@ -1,2 +1,223 @@
 #tomato {
+    padding-top: 80px;
+
+    >.content {
+        width: 100%;
+        max-width: 1120px;
+        margin: 40px auto 0px auto;
+        display: flex;
+
+        .left {
+            width: 55%;
+            display: flex;
+            flex-direction: column;
+
+            .inner {
+                max-width: 450px;
+
+                .timer {
+                    width: 100%;
+                    font-size: 200px;
+                    line-height: 200px;
+                    font-weight: 500;
+                    margin-bottom: 40px;
+                    font-weight: 300px;
+                    color: $color-light3;
+                    text-align: left;
+                }
+
+                .actions {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    button {
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 100%;
+                        border: 2px solid $color-light3;
+                        background: none;
+                        margin: 0 8px;
+                        font-size: 18px;
+                        cursor: pointer;
+
+                        &:hover {
+                            filter: contrast(150%);
+                        }
+
+                        svg path {
+                            color: $color-light3;
+                        }
+
+                        &.play_button {
+                            width: 64px;
+                            height: 64px;
+                            background: $color-light3;
+                            font-size: 21px;
+
+                            .fa-play,
+                            .fa-pause {
+                                display: none;
+                            }
+
+                            &.on .fa-play {
+                                display: inline;
+                            }
+
+                            &.off .fa-pause {
+                                display: inline;
+                            }
+                        }
+                    }
+
+                    .notification {
+                        .fa-bell-slash,
+                        .fa-bell {
+                            display: none;
+                        }
+
+                        &.on .fa-bell {
+                            display: inline;
+                        }
+
+                        &.off .fa-bell-slash {
+                            display: inline;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .right {
+            width: 45%;
+
+            .working_area,
+            .resting_area {
+                display: none;
+            }
+
+            .working_area {
+                .preview-todolist {
+                    padding-top: 24px;
+
+                    li {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        padding-left: 28px;
+                        margin-bottom: 32px;
+                        font-size: 0;
+                        cursor: pointer;
+
+                        &:hover {
+                            font-size: 10px;
+                            font-weight: 300;
+                        }
+
+                        button.finish {
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                            width: 24px;
+                            height: 24px;
+                            margin-right: 16px;
+                            background: none;
+                            border-radius: 100%;
+                            border: 2px solid $color-light3;
+                            cursor: pointer;
+                        }
+
+                        .content {
+                            font-size: 20px;
+                            font-weight: 300;
+                        }
+                    }
+
+                    li:first-child {
+                        padding-left: 40px;
+                        margin-bottom: 52px;
+
+                        &:hover {
+                            font-size: 24px;
+                        }
+
+                        button.finish {
+                            width: 48px;
+                            height: 48px;
+                        }
+
+                        .content {
+                            font-size: 36px;
+                        }
+                    }
+                }
+            }
+
+            .resting_area {
+                h3 {
+                    font-size: 96px;
+                    font-weight: 500;
+                    line-height: 146px;
+                }
+
+                p {
+                    font-size: 32px;
+                    font-weight: 300;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+
+    .tomato-decorate {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 1000px;
+
+        img {
+            width: 100%;
+            display: none;
+        }
+    }
+
+    &.working {
+        #tomato-play_button {
+            svg path {
+                color: $color-secondary2;
+            }
+        }
+
+        #tomato-working_arae {
+            display: block;
+        }
+
+        #tomato-decorate {
+            img.mascot-orange {
+                display: block;
+            }
+        }
+    }
+
+    &.resting {
+        #tomato-play_button {
+            svg path {
+                color: $color-primary2;
+            }
+        }
+
+        #tomato-resting_arae {
+            display: block;
+        }
+
+        #tomato-decorate {
+            img.mascot-green {
+                display: block;
+            }
+        }
+    }
 }
