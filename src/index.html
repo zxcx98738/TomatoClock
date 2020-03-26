@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tomato Clock</title>
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,500&display=swap&subset=chinese-traditional" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,500&display=swap&subset=chinese-traditional"
+        rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
     <script src="./index.js"></script>
 </head>
+
 <body>
     <div class="container">
         <nav>
@@ -29,6 +32,24 @@
             </div>
             <div id="todolist" class="toggle-view todolist">
                 <h3>Hello Todo list</h3>
+                <div class="top">
+                    <h1>待辦事項</h1>
+                    <a>未完成</a>
+                    <a>已完成</a>
+                </div>
+                <div class="add">
+                    <form action="">
+                        <input type="text" placeholder="    新增待辦事項">
+                        <input type="submit">
+                    </form>
+                </div>
+                <hr class="separate">
+                <div class="itemList">
+                    <input id="radio" type="radio" class="item">
+                    <label for="radio">
+                        <span></span>
+                    </label>
+                </div>
             </div>
             <div id="tomato" class="tomato">
                 <h3>Hello Tomato</h3>
@@ -36,4 +57,5 @@
         </main>
     </div>
 </body>
+
 </html>

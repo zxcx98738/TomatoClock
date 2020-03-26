@@ -1,3 +1,70 @@
-#todolist{
-    
+#todolist {
+  .top {
+    display: flex;
+    // justify-content: flex-start;
+    align-items: center;
+    margin-top: 80px;
+    margin-left: 40px;
+    h1 {
+      flex-grow: 2;
+
+      width: 160px;
+      height: 59px;
+      text-align: left;
+      font: Medium 40px/59px Noto Sans TC;
+      letter-spacing: 0;
+      color: #e8e8e8;
+      opacity: 1;
+    }
+    a {
+      flex-grow: 1;
+      text-align: left;
+      width: 48px;
+      height: 24px;
+      align-self: center;
+      font: Regular 16px/24px Noto Sans TC Regular;
+      color: #e8e8e8;
+    }
+  }
+
+  .add {
+    form {
+      display: flex;
+      flex-direction: row;
+      
+      input[type="text"] {
+        flex-grow: 2;
+        border: none;
+        margin-top: 40px;
+        margin-left: 40px;
+        width: 560px;
+        height: 56px;
+        -webkit-border-radius: 28px;
+        border-radius: 28px;
+      }
+    }
+  }
+
+  .itemList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .item {
+      margin-left: 40px;
+      margin-top: 24px;
+      width:24px;
+      height:24px;
+      :after{
+        background-color: #2196F3;
+      }
+    }
+  }
+
+  .separate {
+    margin-top: 40.5px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border: 1px solid #ffffff;
+    opacity: 0.2;
+  }
 }
