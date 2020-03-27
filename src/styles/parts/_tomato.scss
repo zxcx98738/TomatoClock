@@ -60,11 +60,11 @@
                                 display: none;
                             }
 
-                            &.on .fa-play {
+                            &.on .fa-pause {
                                 display: inline;
                             }
 
-                            &.off .fa-pause {
+                            &.off .fa-play {
                                 display: inline;
                             }
                         }
