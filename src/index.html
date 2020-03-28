@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="./index.css">
     <script src="./index.js"></script>
     <style>
-        #demo svg{
+        #demo svg {
             font-size: 48px;
         }
-        #demo svg path{
+
+        #demo svg path {
             color: orange;
         }
     </style>
@@ -63,20 +64,23 @@
                     <a>未完成</a>
                     <a>已完成</a>
                 </div>
-                <div class="add">
-                    <form action="">
-                        <input type="text" placeholder="    新增待辦事項">
-                        <input type="submit">
-                    </form>
+                <div class="add-container">
+                    <input type="text" id="add-text" placeholder="    新增待辦事項" >
+                    <button id="add-button">
+                        <i class="fas fa-plus"></i>
+                    </button>
                 </div>
                 <hr class="separate">
-                <div class="itemList">
-                    <input id="radio" type="radio" class="item">
-                    <label for="radio">
-                        <span></span>
-                    </label>
-                    <i class="fa fa-pen"></i>
+                <div class="itemBlock">
+                    <div class="item">
+                        <input id="checkbox" type="checkbox">
+                    </div>
+                    <div class="item">
+                        <h3 class="word">構思番茄鐘UI介面</h3>
+                    </div>
+                    
                 </div>
+                <hr class="separate2">
             </div>
             <div id="tomato" class="tomato">
                 <h3>Hello Tomato</h3>
