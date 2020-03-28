@@ -379,17 +379,149 @@ body {
         transform: translateX(-100%);
         box-shadow: 0px 0px 40px #0000003D; }
       body > .container > main #tomato {
-        width: 100%;
+        width: calc(100% - 80px);
         height: 100%;
         transition: 0.3s;
         padding-top: 80px;
-        padding-left: 80px; }
+        margin-left: 80px; }
       body > .container > main[class^="toggle"] #tomato {
         transform: translateX(720px); }
       body > .container > main.toggle-\#analysis .toggle-view.analysis {
         transform: translateX(0); }
       body > .container > main.toggle-\#todolist .toggle-view.todolist {
         transform: translateX(0); }
+
+#tomato {
+  padding-top: 80px; }
+  #tomato > .content {
+    width: 100%;
+    max-width: 1120px;
+    margin: 40px auto 0px auto;
+    display: flex; }
+    #tomato > .content .left {
+      width: 55%;
+      display: flex;
+      flex-direction: column; }
+      #tomato > .content .left .inner {
+        max-width: 450px; }
+        #tomato > .content .left .inner .timer {
+          width: 100%;
+          font-size: 200px;
+          line-height: 200px;
+          font-weight: 500;
+          margin-bottom: 40px;
+          font-weight: 300px;
+          color: #E8E8E8;
+          text-align: left; }
+        #tomato > .content .left .inner .actions {
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          #tomato > .content .left .inner .actions button {
+            width: 48px;
+            height: 48px;
+            border-radius: 100%;
+            border: 2px solid #E8E8E8;
+            background: none;
+            margin: 0 8px;
+            font-size: 18px;
+            cursor: pointer; }
+            #tomato > .content .left .inner .actions button:hover {
+              filter: contrast(150%); }
+            #tomato > .content .left .inner .actions button svg path {
+              color: #E8E8E8; }
+            #tomato > .content .left .inner .actions button.play_button {
+              width: 64px;
+              height: 64px;
+              background: #E8E8E8;
+              font-size: 21px; }
+              #tomato > .content .left .inner .actions button.play_button .fa-play,
+              #tomato > .content .left .inner .actions button.play_button .fa-pause {
+                display: none; }
+              #tomato > .content .left .inner .actions button.play_button.on .fa-pause {
+                display: inline; }
+              #tomato > .content .left .inner .actions button.play_button.off .fa-play {
+                display: inline; }
+          #tomato > .content .left .inner .actions .sounds .fa-bell-slash,
+          #tomato > .content .left .inner .actions .sounds .fa-bell {
+            display: none; }
+          #tomato > .content .left .inner .actions .sounds.on .fa-bell {
+            display: inline; }
+          #tomato > .content .left .inner .actions .sounds.off .fa-bell-slash {
+            display: inline; }
+    #tomato > .content .right {
+      width: 45%; }
+      #tomato > .content .right .working_area,
+      #tomato > .content .right .resting_area {
+        display: none; }
+      #tomato > .content .right .working_area .preview-todolist {
+        padding-top: 24px; }
+        #tomato > .content .right .working_area .preview-todolist li {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          padding-left: 28px;
+          margin-bottom: 32px;
+          font-size: 0;
+          cursor: pointer; }
+          #tomato > .content .right .working_area .preview-todolist li:hover {
+            font-size: 10px;
+            font-weight: 300; }
+          #tomato > .content .right .working_area .preview-todolist li button.finish {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 24px;
+            height: 24px;
+            margin-right: 16px;
+            background: none;
+            border-radius: 100%;
+            border: 2px solid #E8E8E8;
+            cursor: pointer; }
+          #tomato > .content .right .working_area .preview-todolist li .content {
+            font-size: 20px;
+            font-weight: 300; }
+        #tomato > .content .right .working_area .preview-todolist li:first-child {
+          padding-left: 40px;
+          margin-bottom: 52px; }
+          #tomato > .content .right .working_area .preview-todolist li:first-child:hover {
+            font-size: 24px; }
+          #tomato > .content .right .working_area .preview-todolist li:first-child button.finish {
+            width: 48px;
+            height: 48px; }
+          #tomato > .content .right .working_area .preview-todolist li:first-child .content {
+            font-size: 36px; }
+      #tomato > .content .right .resting_area h3 {
+        font-size: 96px;
+        font-weight: 500;
+        line-height: 146px; }
+      #tomato > .content .right .resting_area p {
+        font-size: 32px;
+        font-weight: 300;
+        letter-spacing: 2px; }
+  #tomato .tomato-decorate {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1000px; }
+    #tomato .tomato-decorate img {
+      width: 100%;
+      display: none; }
+  #tomato.working #tomato-play_button svg path {
+    color: #F08448; }
+  #tomato.working #tomato-working_arae {
+    display: block; }
+  #tomato.working #tomato-decorate img.mascot-orange {
+    display: block; }
+  #tomato.resting #tomato-play_button svg path {
+    color: #6C9460; }
+  #tomato.resting #tomato-resting_arae {
+    display: block; }
+  #tomato.resting #tomato-decorate img.mascot-green {
+    display: block; }
 
 
 /*# sourceMappingURL=index.css.map*/

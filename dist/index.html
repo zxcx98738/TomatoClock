@@ -8,10 +8,36 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,500&display=swap&subset=chinese-traditional" rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
     <script src="./index.js"></script>
+    <style>
+        #demo svg{
+            font-size: 48px;
+        }
+        #demo svg path{
+            color: orange;
+        }
+    </style>
 <link href="./index.css" rel="stylesheet"></head>
 <body>
     <div class="container">
         <nav>
+            <span>
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-play"></i>
+                <i class="fas fa-pause"></i>
+                <i class="fas fa-times"></i>
+            </span>
+            <span style="font-size: 48px; color: red;">
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-play"></i>
+                <i class="fas fa-pause"></i>
+                <i class="fas fa-times"></i>
+            </span>
+            <span id="demo">
+                <i class="fas fa-bell"></i>
+                <i class="fas fa-play"></i>
+                <i class="fas fa-pause"></i>
+                <i class="fas fa-times"></i>
+            </span>
             <span class="now-datetime front">2020.03.20</span>
             <span class="now-datetime back">星期六13:38</span>
         </nav>
@@ -30,8 +56,60 @@
             <div id="todolist" class="toggle-view todolist">
                 <h3>Hello Todo list</h3>
             </div>
-            <div id="tomato" class="tomato">
-                <h3>Hello Tomato</h3>
+            <div id="tomato" class="tomato working">
+                <div class="content">
+                    <div class="left">
+                        <div class="inner">
+                            <h3 id="timer" class="timer">00:00</h3>
+                            <div class="actions">
+                                <button id="tomato-sounds" class="sounds on">
+                                    <i class="fas fa-bell"></i>
+                                    <i class="fas fa-bell-slash"></i>
+                                </button>
+                                <button id="tomato-play_button" class="play_button on">
+                                    <i class="fas fa-play"></i>
+                                    <i class="fas fa-pause"></i>
+                                </button>
+                                <button id="tomato-skip_button" class="skip"><i class="fas fa-times"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div id="tomato-working_arae" class="working_area">
+                            <ul id="tomato-preview_todolist" class="preview-todolist">
+                                <li>
+                                    <button class="finish">
+                                        <i class="fas fa-check"></i>
+                                    </button>
+                                    <div class="content">構思蕃茄鐘 UI 介面</div>
+                                </li>
+                                <li>
+                                    <button class="finish">
+                                        <i class="fas fa-check"></i></button>
+                                    <div class="content">學習 Javascript</div>
+                                </li>
+                                <li>
+                                    <button class="finish">
+                                        <i class="fas fa-check"></i></button>
+                                    <div class="content">學習網頁切版</div>
+                                </li>
+                                <li>
+                                    <button class="finish">
+                                        <i class="fas fa-check"></i></button>
+                                    <div class="content">設計番茄鐘 UI 介面</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="tomato-resting_arae" class="resting_area">
+                            <h3>休息，</h3>
+                            <p>是為了下一次努力。</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="tomato-decorate" class="tomato-decorate">
+                    <img class="mascot-green" src="./images/tomato--green.svg" alt="analysis-button.svg">
+                    <img class="mascot-orange" src="./images/tomato--orange.svg" alt="analysis-button.svg">
+                </div>
             </div>
         </main>
     </div>
