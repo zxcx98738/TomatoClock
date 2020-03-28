@@ -36,8 +36,8 @@
                 <i class="fas fa-pause"></i>
                 <i class="fas fa-times"></i>
             </span>
-            <span class="now-datetime front">2020.03.20</span>
-            <span class="now-datetime back">星期六13:38</span>
+            <span id="now-datetime_front" class="now-datetime front">2020.03.20</span>
+            <span id="now-datetime_back"  class="now-datetime back">星期六13:38</span>
         </nav>
         <aside id="side-bar" class="side-bar">
             <a class="toggle-btn" href="#todolist">
@@ -55,21 +55,28 @@
                 <h3>Hello Todo list</h3>
             </div>
             <div id="tomato" class="tomato">
-                <!--<h3>Hello Tomato</h3>-->
+               <!--<h3>Hello Tomato</h3>-->
                 <div class="countDown">
-                    <div class="clock">25:00</div>
-                    <button name="bell" class="bell">
+                    <div id="clock" class="clock">25:00</div>
+                    <button id="bell" class="bell">
                         <img src="./images/icon-bell.svg" alt="icon-bell.svg">
                     </button>
-                    <button name="play" class="play">
+                    
+                    <button id="pause" class="play">
+                        <img src="./images/icon-pause--orange.svg" alt="icon-pause--orange.svg">
+                    </button>
+                    <button id="play" class="play">
                         <img src="./images/icon-play--orange.svg" alt="icon-play--orange.svg">
                     </button>
-                    <button name="cancel" class="cancel">
+                    
+                    <button id="cancel" class="cancel">
                         <img  src="./images/icon-cancel.svg" alt="icon-cancel.svg">
                     </button>
                 </div>
+                
                 <div class="bottom">
-                    <img class="orangeTomato" src="./images/tomato--orange.svg" alt="tomato--orange.svg">
+                    <img id="greenTomatoImg" class="tomatoImg" src="./images/tomato--green.svg" alt="tomato--green.svg">
+                    <img id="orangeTomatoImg" class="tomatoImg" src="./images/tomato--orange.svg" alt="tomato--orange.svg">
                 </div>
             </div><!--<h3>Hello Tomato</h3>-->
         </main>

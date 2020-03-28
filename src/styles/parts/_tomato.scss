@@ -21,6 +21,7 @@
 			display: flex;
 			justify-content: center;
 			background-color: $color-primary;
+			outline: none;
 		}
 		.bell {
 			left: 250px;
@@ -38,16 +39,17 @@
 			border-radius: 50%;
 			display: flex;
 			justify-content: center;
+			outline: none;
 		}
 	}
 	.bottom {
 		display: flex;
 		justify-content: center;
-		.orangeTomato {
+		.tomatoImg {
 			position: absolute;
-			top: 620px;
-			width: 1200px;
-			height: 200px;
+			top: 505px;
+			width: 991px;
+			height: 316px;
 		}
 	}
 }
