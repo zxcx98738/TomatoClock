@@ -1,3 +1,76 @@
 #todolist{
-    
+  .top {
+      margin-left: 40px;
+      margin-top: 80px;
+
+      h3 {
+        width: 160px;
+        height: 59px;
+        text-align: left;
+        font: Medium 40px/59px Noto Sans TC;
+        letter-spacing: 0;
+        color: #E8E8E8;
+        opacity: 1;
+        float: left;
+      }
+
+      .not-finish {
+        margin-left: 264px;
+        width: 48px;
+        height: 24px;
+        text-align: right;
+        font: Regular 16px/24px Noto Sans TC Regular;
+        letter-spacing: 0;
+        color: #E8E8E8;
+        opacity: 1;
+      }
+
+      .finish {
+         margin-left: 24px;
+         width: 48px;
+         height: 24px;
+         text-align: right;
+         font: Regular 16px/24px Noto Sans TC Regular;
+         letter-spacing: 0;
+         color: #E8E8E8;
+         opacity: 0.5;
+      }
+  }
+
+  .add-btn {
+    margin-top: 40px;
+    margin-left: 40px;
+    .addTodoItem {
+      width: 560px;
+      height: 56px;
+      padding-left: 15px;
+      background: #FFFFFF 0% 0% no-repeat padding-box;
+      border: 1px solid #FFFFFF;
+      border-radius: 183px;
+      opacity: 1;
+      color: #000;
+    }
+
+    .add {
+      left: 504px;
+      top: 8px;
+      position: absolute;
+      width: 48px;
+      height: 40px;
+      background: #F08448 0% 0% no-repeat padding-box;
+      border-radius: 71px;
+      opacity: 1;
+    }    
+  }
+
+
+
+
+
+  .checkToFinish {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #E8E8E8;
+    opacity: 1;
+  }
 }

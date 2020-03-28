@@ -20,24 +20,6 @@
 <body>
     <div class="container">
         <nav>
-            <span>
-                <i class="fas fa-bell"></i>
-                <i class="fas fa-play"></i>
-                <i class="fas fa-pause"></i>
-                <i class="fas fa-times"></i>
-            </span>
-            <span style="font-size: 48px; color: red;">
-                <i class="fas fa-bell"></i>
-                <i class="fas fa-play"></i>
-                <i class="fas fa-pause"></i>
-                <i class="fas fa-times"></i>
-            </span>
-            <span id="demo">
-                <i class="fas fa-bell"></i>
-                <i class="fas fa-play"></i>
-                <i class="fas fa-pause"></i>
-                <i class="fas fa-times"></i>
-            </span>
             <span class="now-datetime front">2020.03.20</span>
             <span class="now-datetime back">星期六13:38</span>
         </nav>
@@ -54,7 +36,24 @@
                 <h3>Hello Todo Analysis</h3>
             </div>
             <div id="todolist" class="toggle-view todolist">
-                <h3>Hello Todo list</h3>
+                <div class="top">
+                    <h3>待辦清單</h3>
+                    <span class="not-finish">
+                      <a class="toggle-btn" href="#todolist">
+                        未完成
+                      </a>
+                    </span>
+                    <span class="finish">
+                      <a class="toggle-btn" href="#todolist">
+                        已完成
+                      </a>
+                    </span>                   
+                </div>
+                <div class="add-btn">
+                    <input type="text" class="addTodoItem" name="todoItem" placeholder="新增待辦事項">
+                    <input type="button" class="add">                    
+                </div>
+
             </div>
             <div id="tomato" class="tomato">
                 <h3>Hello Tomato</h3>
