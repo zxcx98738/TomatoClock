@@ -39,21 +39,29 @@
                 <div class="top">
                     <h3>待辦清單</h3>
                     <span class="not-finish">
-                      <a class="toggle-btn" href="#todolist">
-                        未完成
+                      <a class="toggle-btn doing-btn">
+                        進行中
                       </a>
                     </span>
                     <span class="finish">
-                      <a class="toggle-btn" href="#todolist">
+                      <a class="toggle-btn finish-btn">
                         已完成
                       </a>
                     </span>                   
                 </div>
                 <div class="add-btn">
-                    <input type="text" class="addTodoItem" name="todoItem" placeholder="新增待辦事項">
-                    <input type="button" class="add">                    
+                    <input type="text" class="addTodoItem" name="todoItem" placeholder="新增待辦事項" required>
+                    <input type="button" class="add">
+                    <span class="add-icon">
+                        <i class="fas fa-plus"></i>
+                    </span>                         
                 </div>
+                <hr class="break-line">
+                <div class="show-list">
+                    <ul class="show-todo-list">
 
+                    </ul>
+                </div>
             </div>
             <div id="tomato" class="tomato">
                 <h3>Hello Tomato</h3>
