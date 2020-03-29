@@ -4,10 +4,10 @@ import {
     RESTING,
     ON,
     OFF
-} from './constants';
+} from './modules/constants';
 
 function formatCounDownString(remainSeconds) {
-    if (remainSeconds < 0) {
+    if (remainSeconds < 0) {ㄋㄟ
         throw Error('remain seconds need greater zero!');
     }
     let minutes = Math.floor(remainSeconds / 60);

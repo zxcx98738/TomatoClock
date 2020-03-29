@@ -7,7 +7,7 @@ import {
     OFF,
     WORKING_DEAFULT_SECONDS,
     RESTING_DEAFULT_SECONDS,
-} from './constants';
+} from './modules/constants';
 
 const DEBUG_SECONDS = 10;
 

@@ -5,9 +5,9 @@ import {
     OFF,
     WORKING_DEAFULT_SECONDS,
     RESTING_DEAFULT_SECONDS,
-} from './constants';
-import NotificationService from './NotificationService';
-import AudioService from './AudioService';
+} from './modules/constants';
+import NotificationService from './modules/NotificationService';
+import AudioService from './modules/AudioService';
 
 function Service(context) {
     const _this = this;
