@@ -30,7 +30,8 @@ var config = {
             filename: "./index.css"
         }),
         new HtmlWebpackPlugin({
-          template: './src/index.html'
+          template: './src/index.html',
+          inject: false
         })
     ],
     devServer: {
