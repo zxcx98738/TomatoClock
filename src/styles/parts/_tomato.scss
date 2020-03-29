@@ -42,6 +42,28 @@
 			outline: none;
 		}
 	}
+
+	.takeaBreak {
+		position: absolute;
+		top: 80px;
+		padding-top: 8px;
+		left: 720px;
+		font-size: 80px;
+		color: $color-light3;
+		font-weight: 500;
+		letter-spacing: 2px;
+	}
+	.nextEffort {
+		position: absolute;
+		top: 200px;
+		padding-top: 8px;
+		left: 720px;
+		font-size: 30px;
+		color: $color-light3;
+		font-weight: 300;
+		letter-spacing: 2px;
+	}
+
 	.bottom {
 		display: flex;
 		justify-content: center;
