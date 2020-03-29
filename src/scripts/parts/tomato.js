@@ -18,52 +18,125 @@ function now_date(){
 
     now_datetime_back.innerHTML = weekdays[now_datetime.getDay()]
         + (now_datetime.getHours() <10 ? '0' : '') + now_datetime.getHours() + ":"
-        + (now_datetime.getMinutes() <10 ? '0' : '') + now_datetime.getMinutes();
+        + (now_datetime.getMinutes() <10 ? '0' : '') + now_datetime.getMinutes()+"///"+now_datetime.getSeconds();;
     setTimeout("now_date()", 1000);
-}
+}       //load the initial time, didnt update, test by +"///"+now_datetime.getSeconds()
 
-$("#play").click(function(){
+
+$("#orangePlay").click(function(){
     changeState(1);
-    countdownfunc();
+    
+    orangeGreenMode = true;
+    countDownGoing = 0;
+    startCount();
 });
-$("#pause").click(function(){
+$("#orangePause").click(function(){
     changeState(2);
+    stopCount();
 });
 function changeState(param){
     if(param == 1){
-        $("#pause").show();
-        $("#play").hide();
+        $("#orangePause").show();
+        $("#orangePlay").hide();
     }else{
-        $("#pause").hide();
-        $("#play").show();
+        $("#orangePause").hide();
+        $("#orangePlay").show();
     }
 }
+$("#orangeCancel").click(function(){
+    countDownNumber=1500;
+    countDownTime.innerHTML = "25:00";
+    stopCount();
+    $("#orangePause").hide();
+    $("#orangePlay").show();
+});
 
+var countDownNumber = 3;
+var countDownID;
+var countDownGoing = 0;
+//var startTime = new Date().getTime();
+var countDownTime = document.getElementById("clock");
+var orangeGreenMode = true;
 
-var countdownnumber=90;
-var countdownid;
+function countDownfunc() {
 
-function countdownfunc(){
-    
-    var x=document.getElementById("clock");
-    var min=Math.floor(countdownnumber/60);
-    var sec=countdownnumber%60
-    x.innerHTML= (min<10 ? '0' : '')+min+":"+(sec<10 ? '0' : '')+sec;
-     
-    if (countdownnumber==0){
+    if (countDownNumber == 0) {
         //alert("倒數結束");
-        x.innerHTML= "00:00";
-        clearTimeout(countdownid);
-    }else{
-        countdownnumber--;
-        if(countdownid){
-            clearTimeout(countdownid);
+        countDownTime.innerHTML = "00:00";
+        clearTimeout(countDownID);
+        if (orangeGreenMode) {
+            countDownNumber = 5;
+            countDownTime.innerHTML = "05:00";
+            orangeGreenMode = false;
+            greenMode();
+        }else {
+            countDownNumber = 10;
+            countDownTime.innerHTML = "25:00";
+            orangeMode();
         }
-        countdownid=setTimeout(countdownfunc,1000);
+        
+    }else {
+        countDownNumber--;
+
+        var countDownMin = Math.floor(countDownNumber / 60);
+        var countDownSec = countDownNumber % 60
+        countDownTime.innerHTML= (countDownMin <10 ? '0' : '') + countDownMin + ":"
+            + (countDownSec <10 ? '0' : '') + countDownSec;
+    
+        countDownID = setTimeout(countDownfunc,1000);
     }
 }
 
+function startCount() {
+    if (!countDownGoing) {
+        countDownGoing = 1;
+        countDownfunc();
+    }
+}
 
+function stopCount() {
+    clearTimeout(countDownID);
+    countDownGoing = 0;
+}
+
+function greenMode() {
+    
+    $("#orangeTomatoImg").hide();
+    $("#greenTomatoImg").show();
+    $("#orangeCancel").hide();
+    $("#greenCancel").show();
+    $("#orangePause").hide();
+    $("#greenPlay").show();
+    
+}
+
+$("#greenPlay").click(function(){
+    greenChangeState(1);
+    
+    countDownGoing = 0;
+    startCount();
+    //orangeGreenMode = true;
+});
+$("#greenPause").click(function(){
+    greenChangeState(2);
+    stopCount();
+});
+
+function greenChangeState(param){
+    if(param == 1){
+        $("#greenPause").show();
+        $("#greenPlay").hide();
+    }else{
+        $("#greenPause").hide();
+        $("#greenPlay").show();
+    }
+}
+function orangeMode() {
+    $("#greenPause").hide();
+    $("#orangePlay").show();
+    $("#greenTomatoImg").hide();
+    $("#orangeTomatoImg").show();
+}
 
 export {
     init
