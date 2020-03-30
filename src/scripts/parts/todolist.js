@@ -93,17 +93,16 @@ const getTodoListItems = status => {
 
     return [];
 }
-// 更新 todo list 狀態
-const updateItemsStatus = status => {
+// 更新指定 id 的狀態
+const updateItemStatus = (id, status) => {
 	var storage = localStorage.getItem('itemsData');
-
 	let itemsArray = [];
     if (storage != null) {
     	var itemsData = JSON.parse(localStorage.getItem('itemsData'));
     	if (typeof status === "boolean") {
 	    	Object.keys(itemsData).map((index, key) => {
-	    		if (itemsData[key].status == status) {
-	    			itemsData[key].status = !status;
+	    		if (itemsData[key].id == id) {
+	    			itemsData[key].status = status;
 	    		}
 	    	})    		
     	}
