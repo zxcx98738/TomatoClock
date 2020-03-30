@@ -2,12 +2,12 @@ import $ from 'jquery';
 
 function init() {
 	var storage = localStorage.getItem('itemsData'); // Todo list data
+	var FINISH_STATUS = true;
+	var UNFINISH_STATUS = false;
 	// if dom ready, show status equal 0;
-	$(document).ready(() => {
-		if (storage != null) {
-			showToDoList(0);
-		}
-	})
+	if (storage != null) {
+		showToDoList(0);
+	}
 	// add to do item
     $(".add-icon").click(() => {
     	let indexArray = [];
@@ -27,7 +27,7 @@ function init() {
     	const toDoItemsData = {
     		"id"         :  maxIndex + 1,
     		"task"       :  toDoItem,
-    		"status"     :  0,
+    		"status"     :  UNFINISH_STATUS,
     		"created_at" :  now
     	}
 
@@ -76,7 +76,43 @@ function init() {
 	    }    	
     }
 }
+// get todo list items, if null return empty array
+const getTodoListItems = status => {
+	var storage = localStorage.getItem('itemsData');
+	let itemsArray = [];
+    if (storage != null) {
+    	const itemsData = JSON.parse(localStorage.getItem('itemsData'));
+    	Object.keys(itemsData).map((index, key) => {
+    		if (itemsData[key].status == status) {
+				itemsArray.push(itemsData[key]);	
+    		}
+    	})
+		
+		return itemsArray;
+    }
+
+    return [];
+}
+// 更新 todo list 狀態
+const updateItemsStatus = status => {
+	var storage = localStorage.getItem('itemsData');
+
+	let itemsArray = [];
+    if (storage != null) {
+    	var itemsData = JSON.parse(localStorage.getItem('itemsData'));
+    	if (typeof status === "boolean") {
+	    	Object.keys(itemsData).map((index, key) => {
+	    		if (itemsData[key].status == status) {
+	    			itemsData[key].status = !status;
+	    		}
+	    	})    		
+    	}
+    	localStorage.setItem('itemsData', JSON.stringify(itemsData));
+    }	
+} 
 
 export {
-    init
+    init,
+    getTodoListItems,
+    updateItemsStatus
 };
